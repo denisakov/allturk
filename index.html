@@ -12,48 +12,43 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
+          <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        
     </head>
     <body>
       <div class="wrapper">
           <!--[if lt IE 8]>
               <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
           <![endif]-->
-        <nav class="navbar" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">
-                <img alt="Brand" src="img/logo.png">
-              </a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <form class="navbar-form navbar-right" role="form">
-                <button type="submit" class="btn btn-success btn-lg">Сделать Заказ</button>
-              </form>
-            </div><!--/.navbar-collapse -->
-          </div>
+        <nav class="navbar navbar-expand-lg justify-content-between">
+          <a class="navbar-brand" href="#">
+            <img alt="Brand" src="img/logo.png" width=200vw class="d-inline-block align-top">
+          </a>
+          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRow" aria-controls="navbarRow" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+
+          <!-- <div class="collapse navbar-collapse" id="navbarRow"> -->
+            <form class="form-inline">
+              <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Сделать Заказ</button>
+            </form>
+          <!-- </div>/.navbar-collapse  -->
         </nav>
 
         <section class="module parallax parallax-1">
           <div>
           </div>
         </section>
-        <section class="content module food-menu" id="foodmenu" >
+        <section class="content module" id="" >
           <div class="container">
             <!-- Example row of columns -->
             <div class="row">
@@ -81,14 +76,14 @@
           <footer>
             <p>&copy; AllTurk 2018</p>
           </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
 
     <script src="js/vendor/bootstrap.min.js"></script>
 
     <script src="js/main.js"></script>
     <script src="js/parallax.js"></script>
-
+    <script src="js/vendor/modernizr-respond.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
