@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Demo</title>
+<link rel="stylesheet" href="css/ex.css" type="text/css">
+<script src="js/dw_event.js" type="text/javascript"></script>
+<script src="js/dw_rotator.js" type="text/javascript"></script>
+<script type="text/javascript">
+var rotator1 = {
+    path:   'images/',
+    id:   'r1',
+    speed:  3000, // default 4500
+    images: ["smile.gif", "grim.gif", "frown.gif", "bomb.gif"]
+}
+
+var rotator2 = {
+    path:   'images/',
+    id:   'r2',
+    speed:  3000, // default 4500
+    bMouse: true,
+    images: ["heron.gif", "wader.gif"]
+}
+
+// Problems, errors? See http://www.dyn-web.com/tutorials/obj_lit.php#syntax
+
+function initRotators() {
+    // .setup can accept more rotators (no need to call multiple times, just add them all here)
+    dw_Rotator.setup(rotator1, rotator2);
+}
+
+dw_Event.add( window, 'load', initRotators);
+</script>
+</head>
+<body>
+
+<h1>Multiple Image Rotators</h1>
+
+<p>The first example is not linked, the second is. Follow the same pattern to set up as many instances as you like.</p>
+
+<p>
+<!-- image that rotates -->
+<img id="r1" src="images/smile.gif" alt="">
+</p>
+
+<p>
+<!-- image that rotates -->
+<!-- Border attribute placed here to minimize support questions on the subject.
+    If you like valid strict markup, remove and place a img {border:none;} spec in style sheet -->
+<a href="index.html"><img id="r2" src="images/heron.gif" alt="" border="0"></a>
+</p>
+
+
+<p>Back to <a href="index.html">index</a> for more demo's and information.</p>
+
+</body>
+</html>

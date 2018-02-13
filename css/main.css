@@ -4,11 +4,411 @@
    Author's custom styles
    ========================================================================== */
 
+/*.navbar, .navbar-collapse{
+    height: 90px;
+    margin-bottom: 20px;
+    border: 0px solid transparent;
+}*/
+
+.navbar-form{
+    margin-top:20px;
+}
+body{
+	padding-top:0px;
+}
+
+/* ============================================================
+  SECTIONS
+============================================================ */
+section.module:last-child {
+  margin-bottom: 0;
+}
+section.module h2 {
+  margin-bottom: 40px;
+  font-family: "Fira Sans", serif;
+  font-size: 2em;
+}
+section.module h2#secondh2 {
+  padding-top: 60px;
+}
+section.module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+section.module p:last-child {
+  margin-bottom: 0;
+}
+section.module.content {
+  padding: 40px 0;
+}
+section.module.parallax {
+  height: 40em;
+  width: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+section.module.parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 4em;
+  line-height: 600px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+section#gallery-div {
+  background-color: #5f5651;
+}
+
+/* PICTURES ----------------------------------------------*/
+#foodpic {
+  z-index:1;
+}
+#foodpic h1 img{
+  position: relative;
+  top: -70px;
+}
+
+@media all and (max-width: 5380px) { 
+  #foodpic {
+    top:-50px;
+  }
+}
 
 
+section.module.parallax-1 {
+  background-image: url("../img/banner.jpg");
+}
+section.module.parallax-2 {
+  background-image: url("../img/content/bg3/largex2.jpg");
+}
+section.module.parallax-3 {
+  background-image: url("../img/content/bg5/largex2.jpg");
+}
+section.module.parallax-4 {
+  background-image: url("../img/content/bg2/largex2.jpg");
+}
+section.module.parallax-5 {
+  background-image: url("../img/content/bg8/largex2.jpg");
+}
+
+/*iPad in portrait & landscape*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  section.module.parallax{
+          background-size: 230%;
+          background-attachment: scroll;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+}
+/*iPad in landscape*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  section.module.parallax{
+          background-size: 100%;
+          background-attachment: scroll;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        section.module.parallax h1 {
+          line-height: 400px;
+        }
+}
+/*iPad in portrait*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  section.module.parallax{
+          background-size: 130%;
+          background-attachment: scroll;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+}
+
+/*             */
+/* NON-RETINA */
+/*            */
+/* Small */
+@media only screen and (max-width: 320px) {
+      section.module.parallax {
+        background-size: 190%;
+        background-attachment: scroll;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+      }
+      section.module.parallax-1 {
+        background-image: url("../img/content/bg6/small.jpg");
+      }
+      section.module.parallax-2 {
+        background-image: url("../img/content/bg3/small.jpg");
+      }
+      section.module.parallax-3 {
+        background-image: url("../img/content/bg7/small.jpg");
+      }
+      section.module.parallax-4 {
+        background-image: url("../img/content/bg2/small.jpg");
+      }
+      section.module.parallax-5 {
+        background-image: url("../img/content/bg1/small.jpg");
+      }
+      section.module.parallax h1 {
+        line-height: 300px;
+      }
+}
+/* Medium */
+@media only screen and (min-width: 321px) and (max-width: 538px) {
+      section.module.parallax{
+        background-size: 150%;
+        background-attachment: scroll;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+      }
+      section.module.parallax-1 {
+        background-image: url("../img/content/bg7/medium.jpg");
+      }
+      section.module.parallax-2 {
+        background-image: url("../img/content/bg3/medium.jpg");
+      }
+      section.module.parallax-3 {
+        background-image: url("../img/content/bg5/medium.jpg");
+      }
+      section.module.parallax-4 {
+        background-image: url("../img/content/bg2/medium.jpg");
+      }
+      section.module.parallax-5 {
+        background-image: url("../img/content/bg8/medium.jpg");
+      }
+      section.module.parallax h1 {
+        line-height: 300px;
+      }
+}
+/*        */
+/* RETINA */
+/*        */
+/* Small */
+/*@media only screen and (min-resolution: 2dppx) and (max-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      section.module.parallax{
+        background-size: 200%;
+        background-attachment: scroll;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      section.module.parallax-1 {
+        background-image: url("../img/content/bg7/smallx2.jpg");
+      }
+      section.module.parallax-2 {
+        background-image: url("../img/content/bg3/smallx2.jpg");
+      }
+      section.module.parallax-3 {
+        background-image: url("../img/content/bg5/smallx2.jpg");
+      }
+      section.module.parallax-4 {
+        background-image: url("../img/content/bg2/smallx2.jpg");
+      }
+      section.module.parallax-5 {
+        background-image: url("../img/content/bg8/smallx2.jpg");
+      }
+}*/
+/* Medium */
+/*@media only screen and (min-resolution: 2dppx) and (min-width: 321px) and (max-width: 538px), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      section.module.parallax{
+        background-size: 100%;
+        background-attachment: scroll;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      section.module.parallax-1 {
+        background-image: url("../img/content/bg7/mediumx2.jpg");
+      }
+      section.module.parallax-2 {
+        background-image: url("../img/content/bg3/mediumx2.jpg");
+      }
+      section.module.parallax-3 {
+        background-image: url("../img/content/bg5/mediumx2.jpg");
+      }
+      section.module.parallax-4 {
+        background-image: url("../img/content/bg2/mediumx2.jpg");
+      }
+      section.module.parallax-5 {
+        background-image: url("../img/content/bg8/mediumx2.jpg");
+      }
+      section.module.parallax h1 {
+          line-height: 400px;
+        }
+}*/
+/* Large */
+/*@media only screen and (min-resolution: 2dppx) and (min-width: 539px), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      
+      section.module.parallax-1 {
+        background-image: url("../img/content/bg7/largex2.jpg");
+      }
+      section.module.parallax-2 {
+        background-image: url("../img/content/bg3/largex2.jpg");
+      }
+      section.module.parallax-3 {
+        background-image: url("../img/content/bg5/largex2.jpg");
+      }
+      section.module.parallax-4 {
+        background-image: url("../img/content/bg2/largex2.jpg");
+      }
+      section.module.parallax-5 {
+        background-image: url("../img/content/bg8/largex2.jpg");
+      }
+}*/
 
 
+/* ============================================================
+  MENU #8f413a, #a6937e, #F8DCA5, #d6b85e, #5f5651
+============================================================ */
+.fix-nav {
+ /* this make our menu fixed top */
+    z-index: 9989;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+ 
+.fix-body {
+ /* this will adjust body top margin to prevent content jumping when nav gets fix  */
+    margin-top: 3em;
+ /* adjust as per height of your menu */;
+}
 
+.nav-container {
+    background-color: #F8DCA5;
+    z-index: 9989;
+}
+#nav-trigger {
+  display: none;
+  text-align: right; }
+  #nav-trigger span {
+    /*display: inline-block;*/
+    /*padding: 10px 30px;*/
+    /*background-color: #F8DCA5;*/
+    /*color: #8f413a;*/
+    cursor: pointer;
+    text-transform: uppercase; }
+    #nav-trigger span:after {
+      /*display: inline-block;*/
+      /*margin-left: 10px;*/
+      /*width: 20px;*/
+      /*height: 10px;*/
+      /*content: "";*/
+      /*border-left: solid 10px transparent;*/
+      /*border-top: solid 10px #fff;*/
+      /*border-right: solid 10px transparent;*/}
+    /*#nav-trigger span:hover {*/
+      /*background-color: #a6937e; }*/
+    /*#nav-trigger span.open:after {*/
+      /*border-left: solid 10px transparent;*/
+      /*border-top: none;*/
+      /*border-bottom: solid 10px #fff;*/
+      /*border-right: solid 10px transparent;*/ }
+nav#nav-main {
+  /*padding: 10px 0;*/
+  /*height: 46px;*/ }
+  nav#nav-main ul {
+    height: calc(3em + 2px);
+    margin: 0;
+    padding: 0;
+  }
+  nav#nav-main li {
+    display: inline-block;
+    padding: 0px 10px;
+    margin: 0;
+    }
+    nav#nav-main li:last-child {
+      border-right: none; }
+  nav#nav-main a {
+    display: block;
+    color: #5f5651;
+    padding: .5em 30px .5em 30px;
+    }
+    nav#nav-main a:hover {
+      background-color: #8f413a;
+      color: #F8DCA5;
+      text-decoration: none; }
+
+nav#nav-mobile {
+  position: relative;
+  display: none; }
+  nav#nav-mobile ul {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #F8DCA5; }
+  nav#nav-mobile li {
+    display: block;
+    border-top: solid 1px #8f413a; }
+    /*nav#nav-mobile li:last-child {
+      border-bottom: none; }*/
+  nav#nav-mobile a {
+    display: block;
+    color: #5f5651;
+    padding: 10px 30px; }
+    nav#nav-mobile a:hover {
+      background-color: #8f413a;
+      color: #F8DCA5;
+      text-decoration: none; }
+
+/* Media Queries -------------------------------- */
+/* FONT SIZE ------------------------*/
+@media all and (min-width: 600px) {
+  section.module h2 {
+    font-size: 3em;
+  }
+  section.module p {
+    font-size: 1.25em;
+  }
+  section.module.parallax h1 {
+    font-size: 6em;
+  }
+  nav#nav-main ul li{
+    font-size: 1.25em;
+  }
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 9em;
+  }
+}
+/* Trigger ---------------------------*/
+@media all and (max-width: 960px) {
+  #nav-trigger {
+    display: block; }
+
+  nav#nav-main {
+    display: none; }
+
+  nav#nav-mobile {
+    display: block; }
+}
 
 
 

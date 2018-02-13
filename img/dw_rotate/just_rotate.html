@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Demo</title>
+<link rel="stylesheet" href="css/ex.css" type="text/css">
+<script src="js/dw_event.js" type="text/javascript"></script>
+<script src="js/dw_rotator.js" type="text/javascript"></script>
+<script type="text/javascript">
+var rotator1 = {
+    path:   'images/',
+    id:   'r1', // id of image that rotates
+    speed:  3000, // default 4500
+    images: ["smile.gif", "grim.gif", "frown.gif", "bomb.gif"]
+}
+
+// Problems, errors? See http://www.dyn-web.com/tutorials/obj_lit.php#syntax
+
+function initRotator() {
+    dw_Rotator.setup(rotator1);
+}
+
+dw_Event.add( window, 'load', initRotator);
+</script>
+</head>
+<body>
+
+<h1>Rotate Images - Basic Setup</h1>
+
+
+<!-- image that rotates -->
+<img id="r1" src="images/smile.gif" alt="">
+
+<p>Back to <a href="index.html">index</a> for more demo's and information.</p>
+
+</body>
+</html>

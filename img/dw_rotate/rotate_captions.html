@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Demo</title>
+<link rel="stylesheet" href="css/ex.css" type="text/css">
+<script src="js/dw_event.js" type="text/javascript"></script>
+<script src="js/dw_rotator.js" type="text/javascript"></script>
+<script type="text/javascript">
+var rotator1 = {
+    path:   'images/',
+    speed:  3000, // default is 4500
+    id:   'r1',
+    images: ["smile.gif", "grim.gif", "frown.gif", "bomb.gif"], 
+    captionId: 'img_caption',
+    captions: ["That's a nice smile!", "Looking pretty grim!", "Why such a sad face?", "Oh oh, look out!"]
+}
+
+// Problems, errors? See http://www.dyn-web.com/tutorials/obj_lit.php#syntax
+
+function initRotator() {
+    dw_Rotator.setup(rotator1);
+}
+
+dw_Event.add( window, 'load', initRotator);
+</script>
+</head>
+<body>
+<h1>Rotating Captions with Images</h1>
+
+<!-- image that rotates -->
+<img id="r1" src="images/smile.gif" alt="" border="0">
+
+<div id="img_caption">That's a nice smile!</div>
+
+<p>&nbsp;</p>
+
+<p>Back to <a href="index.html">index</a> for more demo's and information.</p>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Demo</title>
+<style type="text/css">
+body { font: 14px/1.3 verdana, arial, helvetica, sans-serif; }
+h1 { font-size:1.3em; }
+h2 { font-size:1.2em; }
+a:link { color:#33c; } 
+a:visited { color:#339; }
+p { max-width: 60em; }
+
+/* so linked image won't have border */
+a img { border:none; }
+</style>
+<script type="text/javascript">
+// place your images in this array
+var random_images_array = ['smile.gif', 'frown.gif', 'grim.gif', 'bomb.gif'];
+    
+function getRandomImage(imgAr, path) {
+    path = path || 'images/'; // default path here
+    var num = Math.floor( Math.random() * imgAr.length );
+    var img = imgAr[ num ];
+    var imgStr = '<img src="' + path + img + '" alt = "">';
+    document.write(imgStr); document.close();
+}
+
+</script>
+</head>
+<body>
+    
+<h1>Display Random Image Using JavaScript</h1>
+
+<p>Each time the page is loaded an image will be selected at random. When you add more images to select from, you are less likely to get repeats from one page load to the next. </p>
+
+<div>
+    <!-- This script segment displays an image from the array -->
+    <script type="text/javascript">getRandomImage(random_images_array, 'images/')</script>
+</div>
+
+<!-- or to have image linked: -->
+<!--<a href="."><script type="text/javascript">getRandomImage(random_images_array)</script></a>-->
+
+
+<p>&nbsp;</p>
+
+<p>Find information on setup <a href="http://www.dyn-web.com/code/basics/random_image/random_img_js.php">online</a>.</p>
+
+<p>Thank you for visiting <a href="http://www.dyn-web.com/">dyn-web.com</a>!</p>
+
+</body>
+</html>
