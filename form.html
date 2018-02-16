@@ -3,273 +3,178 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/form.css">
-        <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/form.css"> -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="wrapper">
+      <!--[if lt IE 8]>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+    <nav class="navbar navbar-expand-lg justify-content-between">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="img/logo.png" width=200vw class="d-inline-block align-top">
+      </a>
+      <!-- </div>/.navbar-collapse  -->
+    </nav>
 
-    </head>
-    <body>
-      <div class="wrapper">
-          <!--[if lt IE 8]>
-              <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-          <![endif]-->
-        <nav class="navbar navbar-expand-lg justify-content-between">
-          <a class="navbar-brand" href="#">
-            <img alt="Brand" src="img/logo.png" width=200vw class="d-inline-block align-top">
-          </a>
-          <!-- </div>/.navbar-collapse  -->
-        </nav>
+    <section class="module parallax parallax-1">
+      <div>
+      </div>
+    </section>
 
-        <section class="module parallax parallax-1">
-          <div>
-          </div>
-        </section>
-        <section class="content module" id="" >
-          <div class="container">
+    <section class="content module" id="" >
+      <div class="container">
 
 <!-- This is where the new form starts -->
-            <form method="post" action="./web" onsubmit="" id="ctl01">
-              <div id="main">
-              <div class="subpage" id="pageContent">
-                <div id="pnlOrder">
-                  <div class="conditions">
-                    Условия: 10% от стоимости + шиппинг
-                  </div>
-                  <h2>Заказ на доставку</h2>
-                    <div id="pnlCustomerLoginInfo" class="message hide">
-                    </div>
-                    <ul id="pnlLoginSignup" class="form signup">
-                      <li>
-                        <label>&nbsp;</label>
-                        <div class="value checkbox">
-                            <input type="radio" id="rbNewUser" name="rblAccount" checked=""><label for="rbNewUser">Новый клиент &nbsp;&nbsp;&nbsp;&nbsp;</label>
-                            <input type="radio" id="rbReturningUser" name="rblAccount"><label for="rbReturningUser">Уже регистрировался</label>
-                        </div>
-                      </li>
-                      <li id="pnlName" style="">
-                        <label><span class="req">*</span>Фамилия, имя:</label>
-                        <div class="value">
-                            <input name="ctl00$content$ctl00$txtName" type="text" maxlength="64" id="txtName" class="">
-                        </div>
-                      </li>
-                      <li>
-                        <label><span class="req">*</span>Электронная почта:</label>
-                        <div class="value">
-                            <input name="ctl00$content$ctl00$txtEmail" type="text" maxlength="64" id="txtEmail" autocomplete="off">
-                        </div>
-                      </li>
-                      <li>
-                        <label><span class="req">*</span>Пароль:</label>
-                        <div class="value">
-                            <input name="ctl00$content$ctl00$txtPassword" type="password" maxlength="32" id="txtPassword" autocomplete="off">
-                        </div>
-                      </li>
-                    </ul>
-                    <div class="clear"></div>
-                    <a name="order"></a>
-                      <div class="order" id="orderContainer">
-                        <div class="container" id="itemsContainer">
-                          <div class="item level-0 has-substitutions">
-                            <div class="substitution-note">Вариант замены:    </div>
-                            <div class="number">1</div>
-                            <div class="main">
-                              <div class="field url">
-                                <label><span class="req">*</span>Ссылка:</label>
-                                <div class="value">
-                                  <input type="text" maxlength="1024" watermark="http://" placeholder="http://"></div>
-                                </div>
-                                <div class="field name">
-                                  <label>Название товара: <span class="small">(<a href="#">есть артикул?</a>)</span></label>
-                                  <div class="value"><input type="text" maxlength="256"></div>
-                                </div>
-                                <div class="field article hide">
-                                  <label>Артикул:</label>
-                                  <div class="value"><input type="text" maxlength="256"></div>
-                                </div>
-                                <div class="field color">
-                                  <label>Цвет:</label>
-                                  <div class="value"><input type="text" maxlength="32"></div>
-                                </div>
-                                <div class="field size">
-                                  <label>Размер:</label>
-                                  <div class="value"><input type="text" maxlength="32"></div>
-                                </div>
-                                <div class="field price ">
-                                  <label>Цена на сайте:</label>
-                                  <div class="value">
-                                    <select>
-                                      <option value="USD">$</option>
-                                      <option value="EUR">€</option>
-                                      <option value="GBP">£</option>
-                                      <option value="UAH">грн.</option>
-                                      <option value="RUB">р.</option>
-                                      <option value="BYR">BYR</option>
-                                      <option value="KZT">KZT</option>
-                                      <option value="CNY">¥</option>
-                                      <option value="PLN">zł</option>
-                                      <option value="LVL">ls</option>
-                                      <option value="TRY">TRY</option>
-                                      <option value="KRW">₩</option>
-                                      <option value="HUF">Ft</option>
-                                    </select>
-                                    <input type="text" watermark="0.00" maxlength="7" placeholder="0.00">&nbsp;
-                                  </div>
-                                </div>
-                                <div class="field quantity">
-                                  <label>Кол-во:</label>
-                                  <div class="value"><input type="text" value="1" maxlength="3"></div>
-                                </div>
-                                <div class="field controls">
-                                  <span class="small">
-                                    <a href="#" class="add-comment">Добавить комментарий</a>
-                                    <span class="or">или</span>
-                                    <a href="#" class="add-substitution">указать вариант замены</a>
-                                  </span>
-                                </div>
-                                <div class="field comment hide">
-                                  <label>Комментарий:</label>
-                                  <div class="value"><input type="text" maxlength="256"></div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="checkboxes hide">
-                                  <span class="check removeOriginalPackage hide">
-                                    <input type="checkbox" class="removeOriginalPackage">
-                                    <label>Отправить без оригинальной упаковки</label>
-                                  </span>
-                                  <span class="check checkItem hide">
-                                    <input type="checkbox" class="checkItem">
-                                    <label>Заказать проверку товара</label>
-                                  </span>
-                                </div>
-                              </div>
+        <form method="post" action="submit()" onsubmit="" id="order">
+          <h2>Оформление заказа</h2>
+          <div class="conditions">
+            Условия: 10% от стоимости + шиппинг
+          </div>
+          <div class="form-group">
+            <label>Фамилия, имя:</label>
+            <input type="text" maxlength="64" id="txtName" class="">
+          </div>
+          <div class="form-group">
+            <label>Электронная почта:</label>
+            <input type="text" maxlength="64" id="txtEmail" autocomplete="off">
+          </div>
+          <!-- http://jsfiddle.net/sb8fyehv/ -->
+        <div class="repeat-product">
+<!-- Product section -->
+          <div class="form-group">
+            <h3>Товар</h3>
+            <label for="productLink">Ссылка:</label>
+            <input id="productLink" name="productLink" type="text" maxlength="1024" class="jq_watermark" title="http://">
+          </div>
+          <div class="form-group">
+            <label for="productName">Название товара/Артикул:</label>
+            <input id="productName" name="productName" type="text" maxlength="256">
+          </div>
+          <div class="form-group">
+            <label for="productColor">Цвет:</label>
+            <input id="productColor" name="productColor" type="text" maxlength="32">
 
-                              <div class="control hide">
-                                <a class="delete" href="#"></a>
-                              </div>
-                              <div class="clear"></div>
-                            </div>
-                            <div class="item substitution last">
-                              <div class="substitution-note">Вариант замены:    </div>
-                              <div class="number"></div>
-                              <div class="main">
-                                <div class="field url">
-                                  <label><span class="req">*</span>Ссылка:</label>
-                                  <div class="value">
-                                    <input type="text" maxlength="1024" watermark="http://" placeholder="http://">
-                                  </div>
-                                </div>
-                                <div class="field name">
-                                  <label>Название товара: <span class="small">(<a href="#">есть артикул?</a>)</span></label>
-                                  <div class="value"><input type="text" maxlength="256"></div>
-                                </div>
-                                <div class="field article hide">
-                                  <label>Артикул:</label>
-                                  <div class="value"><input type="text" maxlength="256"></div>
-                                </div>
-                                <div class="field color">
-                                  <label>Цвет:</label>
-                                  <div class="value"><input type="text" maxlength="32"></div>
-                                </div>
-                                <div class="field size">
-                                  <label>Размер:</label>
-                                  <div class="value"><input type="text" maxlength="32"></div>
-                                </div>
-                                <div class="field price ">
-                                  <label>Цена на сайте:</label>
-                                  <div class="value">
-                                    <select><option value="USD">$</option><option value="EUR">€</option><option value="GBP">£</option><option value="UAH">грн.</option><option value="RUB">р.</option><option value="BYR">BYR</option><option value="KZT">KZT</option><option value="CNY">¥</option><option value="PLN">zł</option><option value="LVL">ls</option><option value="TRY">TRY</option><option value="KRW">₩</option><option value="HUF">Ft</option></select><input type="text" watermark="0.00" maxlength="7" placeholder="0.00">&nbsp;
-                                  </div>
-                                </div>
-                                <div class="field quantity">
-                                  <label>Кол-во:</label>
-                                  <div class="value"><input type="text" value="1" maxlength="3"></div>
-                                </div>
-                                <div class="field controls hide">
-                                  <span class="small">
-                                    <a href="#" class="add-comment">Добавить комментарий</a>
-                                    <span class="or">или</span>
-                                    <a href="#" class="add-substitution">указать вариант замены</a>
-                                  </span>
-                                </div>
-                                <div class="field comment hide">
-                                  <label>Комментарий:</label>
-                                  <div class="value"><input type="text" maxlength="256"></div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="checkboxes hide">
-                                  <span class="check removeOriginalPackage hide">
-                                    <input type="checkbox" class="removeOriginalPackage">
-                                    <label>Отправить без оригинальной упаковки</label>
-                                  </span>
-                                  <span class="check checkItem hide">
-                                    <input type="checkbox" class="checkItem">
-                                    <label>Заказать проверку товара</label>
-                                  </span>
-                                </div>
-                              </div>
-                              <div class="control">
-                                <a class="delete" href="#"></a>
-                              </div>
-                              <div class="clear"></div>
-                            </div>
-                          </div>
+            <label for="productSize">Размер:</label>
+            <input id="productSize" name="productSize" type="text" maxlength="32">
+          </div>
+          <div class="form-group">
+            <label for="productPrice">Цена на сайте:</label>
+            <select id="productCurrency" name="productCurrency" >
+              <option value="TRY">TRY</option>
+              <option value="USD">$</option>
+              <option value="EUR">€</option>
+            </select>
+            <input id="productPrice" name="productPrice" type="text" class="jq_watermark" maxlength="7" title="0.00">&nbsp;
 
-                          <div class="extra" id="additionalFieldsContainer">
-                              <ul class="form">
-                              </ul>
-                              <div class="clear"></div>
-                          </div>
+            <label for="productQty">Кол-во:</label>
+            <input id="productQty" name="productQty" type="text" value="1" maxlength="3">
+          </div>
+          <div class="form-group">
+            <span class="small">
+              <a href="#">Добавить комментарий</a>
+              <span class="or">или</span>
+              <a href="#">указать вариант замены</a>
+            </span>
 
-                          <div class="footer">
-                            <div class="controls">
-                                <a href="#" class="dotted" id="aAdd">Добавить новый товар</a>
-                            </div>
-                            <div class="totals">
-                                <div class="left">Всего к оплате: &nbsp;</div>
-                                <div class="left total"><div>$ 0.00</div></div>
-                            </div>
-
-                            <div class="comments">
-                                <label>Комментарии к заказу:</label>
-                                <textarea id="txtComments" watermark="Например: если не будет размера 2T, можно взять на размер больше. Получить хочу СуперПочтой, на склад №3." placeholder="Например: если не будет размера 2T, можно взять на размер больше. Получить хочу СуперПочтой, на склад №3."></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <ul class="form order">
-                        <li class="buttons">
-                            <div class="errors" id="errors"></div>
-                            <a class="button orange" id="aSubmit">Заказать</a>
-                        </li>
-                    </ul>
-
-                </div>
-
-                <div class="hide" id="pnlSuccess">
-                    <div class="message success">
-                        Ваш заказ отправлен!<br>
-                        <a href="" target="_blank" id="aSuccess">Перейти к списку заказов</a>
-                    </div>
-                </div>
+            <div style="display: none;">
+              <label for="productComment">Комментарий:</label>
+              <input id="productComment" name="productComment" type="text" maxlength="256">
             </div>
-          </form>
+          </div>
+          <div class="form-group">
+            <span>
+              <input id="productNoPackaging" name="productNoPackaging" type="checkbox" class="removeOriginalPackage">
+              <label for="productNoPackaging">Отправить без оригинальной упаковки</label>
+            </span>
+          </div>
+          <div class="form-group">
+            <span>
+              <input id="productCheck" name="productCheck" type="checkbox">
+              <label for="productCheck">Заказать проверку товара</label>
+            </span>
 
-        </div> <!-- /container -->
-      </section>
-    </div>
-      <hr>
+            <a class="delete" href="#"></a>
+          </div>
+<!-- Replacement product section -->
+          <div class="form-group" style="display: none;">
+            <div class="substitution-note">Вариант замены:</div>
+            <label>Ссылка:</label>
+            <input type="text" maxlength="1024" watermark="http://" placeholder="http://">
+            <label>Название товара: <span class="small">(<a href="#">есть артикул?</a>)</span></label>
+            <input type="text" maxlength="256">
+            <label>Артикул:</label>
+            <input type="text" maxlength="256">
+            <label>Цвет:</label>
+            <input type="text" maxlength="32">
+            <label>Размер:</label>
+            <input type="text" maxlength="32">
+            <label>Цена на сайте:</label>
+            <select>
+              <option value="TRY">TRY</option>
+              <option value="USD">$</option>
+              <option value="EUR">€</option>
+            </select>
+            <input type="text" class="jq_watermark" maxlength="7" title="0.00">&nbsp;
+            <label>Кол-во:</label>
+            <input type="text" value="1" maxlength="3">
+            <span class="small">
+            <a href="#" class="add-comment">Добавить комментарий</a>
+            <span class="or">или</span>
+              <a href="#" class="add-substitution">указать вариант замены</a>
+            </span>
+            <label>Комментарий:</label>
+            <input type="text" maxlength="256">
+            <span class="check removeOriginalPackage hide">
+              <input type="checkbox" class="removeOriginalPackage">
+              <label>Отправить без оригинальной упаковки</label>
+            </span>
+            <span class="check checkItem hide">
+              <label>Заказать проверку товара</label>
+              <input type="checkbox" class="checkItem">
+            </span>
+            <a class="delete" href="#"></a>
+          </div>
+        </div>
+          <!-- End of replacement product section -->
+          <div class="form-group">
+            <a href="#" class="add-product">Добавить новый товар</a>
+          </div>
+          <div class="totals">
+            <div class="left">Всего к оплате: &nbsp;</div>
+            <div class="left total"><div>$ 0.00</div></div>
+          </div>
+          <!-- End of product section -->
+          <div class="form-group">
+            <div class="comments">
+              <label>Комментарии к заказу:</label>
+              <textarea class="jq_watermark" id="txtComments" title="Пример: если нет красного цвета, можно брать черный."></textarea>
+            </div>
+            <div class="errors" id="errors"></div>
+            <button type="submit" class="btn btn-primary">Заказать</button>
+            <div class="message success" style="display: none;">
+              Ваш заказ отправлен!<br>
+            </div>
+          </div>
+        </form>
+      </div> <!-- /container -->
+    </section>
+  </div>
+    <hr>
 
-      <footer>
-        <p>&copy; AllTurk 2018</p>
-      </footer>
+    <footer>
+      <p>&copy; AllTurk 2018</p>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
 
@@ -278,6 +183,7 @@
     <script src="js/main.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/vendor/modernizr-respond.js"></script>
+    <script src="js/vendor/watermark.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -288,5 +194,5 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X','auto');ga('send','pageview');
     </script>
-    </body>
+  </body>
 </html>

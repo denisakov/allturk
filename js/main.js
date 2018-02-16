@@ -1,23 +1,21 @@
-function updateAccountSelection() {
-    if ($('#rbNewUser').is(':checked')) {
-        $('#pnlName').show();
-        // $('#pnlForgotPassword').hide();
+//UTILITIES
+$(document).on('click', '.add-product', function () {
+    var currentCount = $('.repeat-product').length;
+    var newCount = currentCount + 1;
+    var lastRepeatingGroup = $('.repeat-product').last();
+    var template = $('.repeat-product').first();
+    var newSection = template.clone();
+    var newHeading = $('h3', newSection).append(' ' + newCount);
 
-        $('#txtName').focus();
-    }
-    else {
-        $('#pnlName').hide();
-        $('#txtEmail').focus();
-    }
-};
-// $(document).on("change","input[name='rblAccount']",updateAccountSelection());
-// $("input[name='rblAccount']").change(updateAccountSelection());
-// $('#aAdd').click(function () { context.addItem(); return false; });
-// $('#txtEmail').checkAvailability(2, $('#emailValidation'));
-// $('#aSubmit').click(function () { context.submit(); });
-// $('#additionalFieldsContainer input, #additionalFieldsContainer select').change(function () { context.refreshTotals(); });
-
-// $(document).on('change', 'input[type=radio][name=gender]', function () {
-//         alert('hi');
-//     });
-$("input[name='rblAccount']").click(updateAccountSelection());
+    lastRepeatingGroup.removeClass('current-product');
+    newSection.insertAfter(lastRepeatingGroup).hide().addClass('current-product new-product').slideDown(1000);
+    newSection.find("input").each(function (index, input) {
+        var i = $(this).attr('id');
+        $(this).attr('id', i + newCount);
+    });
+    newSection.find("label").each(function (index, label) {
+        var l = $(this);
+        l.attr('for', l.attr('for') + newCount);
+    });
+    return false;
+});
