@@ -52,4 +52,4 @@ $(document).on('click', '.delete-product', function () {
     return true;
 });
 $.watermarker.setDefaults({ color: '#f00', left: 8 });
-$('input[type=textarea]').watermark();
+$('input#comment').watermark();
