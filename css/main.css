@@ -1,5 +1,3 @@
-
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -16,7 +14,12 @@
 body{
 	padding-top:0px;
 }
-
+.comment{
+  width: 95%;
+}
+textarea {
+  width: 95%;
+}
 /* ============================================================
   SECTIONS
 ============================================================ */
@@ -85,7 +88,7 @@ section#gallery-div {
 
 
 section.module.parallax-1 {
-  background-image: url("../img/banner.jpg");
+  background-image: url("../img/largex2.jpg");
 }
 section.module.parallax-2 {
   background-image: url("../img/content/bg3/largex2.jpg");
@@ -151,19 +154,19 @@ section.module.parallax-5 {
         height: 300px;
       }
       section.module.parallax-1 {
-        background-image: url("../img/content/bg6/small.jpg");
+        background-image: url("../img/small.jpg");
       }
       section.module.parallax-2 {
-        background-image: url("../img/content/bg3/small.jpg");
+        background-image: url("../img/small.jpg");
       }
       section.module.parallax-3 {
-        background-image: url("../img/content/bg7/small.jpg");
+        background-image: url("../img/small.jpg");
       }
       section.module.parallax-4 {
-        background-image: url("../img/content/bg2/small.jpg");
+        background-image: url("../img/small.jpg");
       }
       section.module.parallax-5 {
-        background-image: url("../img/content/bg1/small.jpg");
+        background-image: url("../img/small.jpg");
       }
       section.module.parallax h1 {
         line-height: 300px;
@@ -180,19 +183,19 @@ section.module.parallax-5 {
         height: 300px;
       }
       section.module.parallax-1 {
-        background-image: url("../img/content/bg7/medium.jpg");
+        background-image: url("../img/medium.jpg");
       }
       section.module.parallax-2 {
-        background-image: url("../img/content/bg3/medium.jpg");
+        background-image: url("../img/medium.jpg");
       }
       section.module.parallax-3 {
-        background-image: url("../img/content/bg5/medium.jpg");
+        background-image: url("../img/medium.jpg");
       }
       section.module.parallax-4 {
-        background-image: url("../img/content/bg2/medium.jpg");
+        background-image: url("../img/medium.jpg");
       }
       section.module.parallax-5 {
-        background-image: url("../img/content/bg8/medium.jpg");
+        background-image: url("../img/medium.jpg");
       }
       section.module.parallax h1 {
         line-height: 300px;
@@ -212,19 +215,19 @@ section.module.parallax-5 {
         height: 100%;
       }
       section.module.parallax-1 {
-        background-image: url("../img/content/bg7/smallx2.jpg");
+        background-image: url("../img/smallx2.jpg");
       }
       section.module.parallax-2 {
-        background-image: url("../img/content/bg3/smallx2.jpg");
+        background-image: url("../img/smallx2.jpg");
       }
       section.module.parallax-3 {
-        background-image: url("../img/content/bg5/smallx2.jpg");
+        background-image: url("../img/smallx2.jpg");
       }
       section.module.parallax-4 {
-        background-image: url("../img/content/bg2/smallx2.jpg");
+        background-image: url("../img/smallx2.jpg");
       }
       section.module.parallax-5 {
-        background-image: url("../img/content/bg8/smallx2.jpg");
+        background-image: url("../img/smallx2.jpg");
       }
 }*/
 /* Medium */
@@ -238,19 +241,19 @@ section.module.parallax-5 {
         height: 100%;
       }
       section.module.parallax-1 {
-        background-image: url("../img/content/bg7/mediumx2.jpg");
+        background-image: url("../img/mediumx2.jpg");
       }
       section.module.parallax-2 {
-        background-image: url("../img/content/bg3/mediumx2.jpg");
+        background-image: url("../img/mediumx2.jpg");
       }
       section.module.parallax-3 {
-        background-image: url("../img/content/bg5/mediumx2.jpg");
+        background-image: url("../img/mediumx2.jpg");
       }
       section.module.parallax-4 {
-        background-image: url("../img/content/bg2/mediumx2.jpg");
+        background-image: url("../img/mediumx2.jpg");
       }
       section.module.parallax-5 {
-        background-image: url("../img/content/bg8/mediumx2.jpg");
+        background-image: url("../img/mediumx2.jpg");
       }
       section.module.parallax h1 {
           line-height: 400px;
@@ -260,19 +263,19 @@ section.module.parallax-5 {
 /*@media only screen and (min-resolution: 2dppx) and (min-width: 539px), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       
       section.module.parallax-1 {
-        background-image: url("../img/content/bg7/largex2.jpg");
+        background-image: url("../img/largex2.jpg");
       }
       section.module.parallax-2 {
-        background-image: url("../img/content/bg3/largex2.jpg");
+        background-image: url("../img/largex2.jpg");
       }
       section.module.parallax-3 {
-        background-image: url("../img/content/bg5/largex2.jpg");
+        background-image: url("../img/largex2.jpg");
       }
       section.module.parallax-4 {
-        background-image: url("../img/content/bg2/largex2.jpg");
+        background-image: url("../img/largex2.jpg");
       }
       section.module.parallax-5 {
-        background-image: url("../img/content/bg8/largex2.jpg");
+        background-image: url("../img/largex2.jpg");
       }
 }*/
 
@@ -409,10 +412,9 @@ nav#nav-mobile {
   nav#nav-mobile {
     display: block; }
 }
+/* Utilities ----------------------------*/
 
-
-
-
+/*a.delete-product {background:url(./img/icon-delete.png) no-repeat top left; display:block; width:22px; height:22px;}*/
 
 
 
