@@ -33,7 +33,7 @@
       <!-- <div class="container"> -->
 
 <!-- This is where the new form starts -->
-        <form method="post" action="submit()" onsubmit="" id="order">
+        <form id="order">
           <h2>Оформление заказа</h2>
           <div class="conditions">
             Условия: 10% от стоимости + шиппинг
@@ -181,7 +181,7 @@
               <input class="form-control" id="comment" title="Пример: если нет красного цвета, можно брать черный." type="textarea"></input>
             </div>
             <div class="errors" id="errors"></div>
-            <button type="submit" class="btn btn-primary">Заказать</button>
+            <button type="submit" class="btn btn-primary" id="submitBtn">Заказать</button>
             <div class="message success" style="display: none;">
               Ваш заказ отправлен!<br>
             </div>
