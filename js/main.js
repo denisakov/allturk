@@ -76,9 +76,9 @@ $(document).on('click', '.delete-product', function () {
 
 		// Fire off the request to /form.php
 		request = $.ajax({
-			url: "https://script.google.com/macros/s/AKfycbyIZXopHL1bzFykYHptdOTIHkspO759-qi1xEjIPMcwz0S2HKZl/exec?source=allturk",
 			method: "POST",
-			dataType: 'jsonp',
+			url: "https://script.google.com/macros/s/AKfycbyIZXopHL1bzFykYHptdOTIHkspO759-qi1xEjIPMcwz0S2HKZl/exec?source=allturk",
+			dataType: "jsonp",
 			data: serializedData
 		});
 
@@ -97,7 +97,7 @@ $(document).on('click', '.delete-product', function () {
 		// if the request failed or succeeded
 		request.always(function (response) {
 			// Reenable the inputs
-			$inputs.prop("disabled", false);
+			//$inputs.prop("disabled", false);
 			console.log(response.result + ". Row " + response.row + " was created.");
 		});
 
