@@ -49,71 +49,70 @@
           <!-- http://jsfiddle.net/sb8fyehv/ -->
 <!-- Product section -->
         <div class="repeat-product">
-
-          <div class="form-group">
-            <h3>Товар</h3>
-            <label for="productLink">Ссылка:</label>
-            <input id="productLink" name="productLink" type="text" maxlength="1024" class="jq_watermark" title="http://">
-          </div>
-          <div class="form-group">
-            <label for="productName">Название товара/Артикул:</label>
-            <input id="productName" name="productName" type="text" maxlength="256">
-          </div>
-          <div class="form-group">
-            <label for="productColor">Цвет:</label>
-            <input id="productColor" name="productColor" type="text" maxlength="32">
-
-            <label for="productSize">Размер:</label>
-            <input id="productSize" name="productSize" type="text" maxlength="32">
-          </div>
-          <div class="form-group">
-            <label for="productPrice">Цена на сайте:</label>
-            <select id="productCurrency" name="productCurrency" >
-              <option value="TRY">TRY</option>
-              <option value="USD">$</option>
-              <option value="EUR">€</option>
-            </select>
-            <input id="productPrice" name="productPrice" type="text" class="jq_watermark" maxlength="7" title="0.00">&nbsp;
-
-            <label for="productQty">Кол-во:</label>
-            <input id="productQty" name="productQty" type="text" value="1" maxlength="3">
-          </div>
-          <div class="form-group">
-            <span class="small">
-              <a href="#">Добавить комментарий</a>
-              <span class="or">или</span>
-              <a href="#">указать вариант замены</a>
-            </span>
-
-            <div style="display: none;">
-              <label for="productComment">Комментарий:</label>
-              <input id="productComment" name="productComment" type="text" maxlength="256">
+          <div class="main-product">
+            <div class="form-group">
+              <h3>Товар</h3>
+              <label for="productLink">Ссылка:</label>
+              <input id="productLink" name="productLink" type="text" maxlength="1024">
             </div>
-          </div>
-          <div class="form-group">
-            <span>
-              <input id="productNoPackaging" name="productNoPackaging" type="checkbox">
-              <label for="productNoPackaging">Отправить без оригинальной упаковки</label>
-            </span>
-          </div>
-          <div class="form-group">
-            <span>
-              <input id="productCheck" name="productCheck" type="checkbox">
-              <label for="productCheck">Заказать проверку товара</label>
-            </span>
-          </div>
-          <button class="btn btn-primary glyphicon glyphicon-remove delete-product" id="productDelete" name="productDelete" style="display: none;">
-            <label for="productDelete">Удалить</label>
-          </button>
-          </a>
+            <div class="form-group">
+              <label for="productName">Название товара/Артикул:</label>
+              <input id="productName" name="productName" type="text" maxlength="256">
+            </div>
+            <div class="form-group">
+              <label for="productColor">Цвет:</label>
+              <input id="productColor" name="productColor" type="text" maxlength="32">
+
+              <label for="productSize">Размер:</label>
+              <input id="productSize" name="productSize" type="text" maxlength="32">
+            </div>
+            <div class="form-group">
+              <label for="productPrice">Цена на сайте:</label>
+              <select id="productCurrency" name="productCurrency" >
+                <option value="TRY">TRY</option>
+                <option value="USD">$</option>
+                <option value="EUR">€</option>
+              </select>
+              <input id="productPrice" name="productPrice" type="text" maxlength="7">&nbsp;
+
+              <label for="productQty">Кол-во:</label>
+              <input id="productQty" name="productQty" type="text" value="1" maxlength="3">
+            </div>
+            <div class="form-group">
+              <span class="small">
+                <a href="">Добавить комментарий</a>
+                <span class="or">или</span>
+                <a href="" id="productReplaceAdd" name="productReplaceAdd">вариант замены</a>
+              </span>
+
+              <div style="display: none;">
+                <label for="productComment">Комментарий:</label>
+                <input id="productComment" name="productComment" type="text" maxlength="256">
+              </div>
+            </div>
+            <div class="form-group">
+              <span>
+                <input id="productNoPackaging" name="productNoPackaging" type="checkbox">
+                <label for="productNoPackaging">Отправить без оригинальной упаковки</label>
+              </span>
+            </div>
+            <div class="form-group">
+              <span>
+                <input id="productCheck" name="productCheck" type="checkbox">
+                <label for="productCheck">Заказать проверку товара</label>
+              </span>
+            </div>
+            <button class="btn btn-primary glyphicon glyphicon-remove delete-product" id="productDelete" name="productDelete" style="display: none;">
+              <label for="productDelete">Удалить</label>
+            </button>
         </div>
 
 <!-- Replacement product section -->
-        <div class="repeat-replace-product" style="display: none;">
+        <div class="replace-product" style="display: none;">
           <div class="form-group">
-            <h3>Товар</h3>
+            <h3>Замена</h3>
             <label for="replaceProductLink">Ссылка:</label>
-            <input id="replaceProductLink" name="replaceProductLink" type="text" maxlength="1024" class="jq_watermark" title="http://">
+            <input id="replaceProductLink" name="replaceProductLink" type="text" maxlength="1024" title="http://">
           </div>
           <div class="form-group">
             <label for="replaceProductName">Название товара/Артикул:</label>
@@ -133,7 +132,7 @@
               <option value="USD">$</option>
               <option value="EUR">€</option>
             </select>
-            <input id="replaceProductPrice" name="replaceProductPrice" type="text" class="jq_watermark" maxlength="7" title="0.00">&nbsp;
+            <input id="replaceProductPrice" name="replaceProductPrice" type="text" maxlength="7" title="0.00">&nbsp;
 
             <label for="replaceProductQty">Кол-во:</label>
             <input id="replaceProductQty" name="replaceProductQty" type="text" value="1" maxlength="3">
@@ -141,8 +140,6 @@
           <div class="form-group">
             <span class="small">
               <a href="#">Добавить комментарий</a>
-              <span class="or">или</span>
-              <a href="#">указать вариант замены</a>
             </span>
 
             <div style="display: none;">
@@ -165,6 +162,7 @@
             <a class="delete" href="#"></a>
           </div>
         </div>
+      </div>
           <!-- End of replacement product section -->
           <div class="form-group">
             <a href="#" class="add-product">Добавить новый товар</a>
@@ -180,8 +178,9 @@
               <br />
               <input class="form-control" id="comment" title="Пример: если нет красного цвета, можно брать черный." type="textarea"></input>
             </div>
-            <div class="errors" id="errors"></div>
-            <button type="submit" class="btn btn-primary" id="submitBtn">Заказать</button>
+            <div class="">
+              <button type="submit" class="btn btn-primary" id="submitBtn">Заказать</button>
+            </div>
             <div class="message success" style="display: none;">
               Ваш заказ отправлен!<br>
             </div>

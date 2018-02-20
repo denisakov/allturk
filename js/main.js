@@ -1,6 +1,6 @@
 //UTILITIES
-var counter = (function() {
-  var privateCounter = 1;
+var counter = (() => {
+  var privateCounter = 2;
   function changeBy(val) {
     privateCounter += val;
   }
@@ -23,12 +23,19 @@ $(document).on('click', '.add-product', function () {
     var template = $('.repeat-product').first();
     var newSection = template.clone();
     var newHeading = $('h3', newSection).append(' ' + newCount);
+    //var replaceProductSection = ;
 
     lastRepeatingGroup.removeClass('current-product');
-    newSection.insertAfter(lastRepeatingGroup).hide().addClass('product' + newCount).slideDown(1000);
+    // newSection.insertAfter(lastRepeatingGroup).hide().addClass('product' + newCount).slideDown(1000);
+    newSection.insertBefore($(this)).hide().addClass('product' + newCount).slideDown(1000);
+    $('.replace-product').last().attr('class','replace-product' + newCount);
     newSection.find("input").each(function (index, input) {
         var i = $(this).attr('id');
         $(this).attr('id', i + newCount);
+    });
+    newSection.find("a").each(function (index, a) {
+        var a = $(this).attr('id');
+        $(this).attr('id', a + newCount);
     });
     newSection.find("label").each(function (index, label) {
         var l = $(this);
@@ -43,7 +50,15 @@ $(document).on('click', '.add-product', function () {
     counter.increment();
     return false;
 });
-
+$(document).on('click', 'a[name=productReplaceAdd]', function (event) {
+	event.preventDefault();
+    var currentIndex = $(this).attr('id').replace(/\D/g,'').trim();
+    var currentReplaceProduct = $('.replace-product' + currentIndex);
+    currentReplaceProduct.attr('style','display: block;');
+    console.log(currentReplaceProduct);
+    // currentProduct.remove();
+    return true;
+});
 $(document).on('click', '.delete-product', function () {
     var currentIndex = $(this).attr('id').replace(/\D/g,'').trim();
     var currentProduct = $('.product' + currentIndex).remove();

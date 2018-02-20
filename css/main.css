@@ -20,6 +20,12 @@ body{
 textarea {
   width: 95%;
 }
+.hide{
+  display: none;
+}
+.replace-product{
+  background-color: lightgrey;
+}
 /* ============================================================
   SECTIONS
 ============================================================ */
