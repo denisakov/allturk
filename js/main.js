@@ -19,19 +19,23 @@ var counter = (() => {
 $(document).on('click', '.add-product', function () {
     var currentCount = $('.repeat-product').length;
     var newCount = counter.value();
+    console.log(newCount);
     var lastRepeatingGroup = $('.repeat-product').last();
     var template = $('.repeat-product').first();
     var newSection = template.clone();
-    var newHeading = $('h3', newSection).append(' ' + newCount);
+    var newHeading = $('h4', newSection).append(' ' + newCount);
     //var replaceProductSection = ;
 
     lastRepeatingGroup.removeClass('current-product');
     // newSection.insertAfter(lastRepeatingGroup).hide().addClass('product' + newCount).slideDown(1000);
     newSection.insertBefore($(this)).hide().addClass('product' + newCount).slideDown(1000);
+
     $('.replace-product').last().attr('class','replace-product' + newCount);
+    $('.replace-product'+ newCount).attr('style','display: none;');
     newSection.find("input").each(function (index, input) {
         var i = $(this).attr('id');
         $(this).attr('id', i + newCount);
+        $(this).val('');
     });
     newSection.find("a").each(function (index, a) {
         var a = $(this).attr('id');
@@ -66,6 +70,16 @@ $(document).on('click', '.delete-product', function () {
     // currentProduct.remove();
     return true;
 });
+//Replace product controls
+$(document).on('click', 'a[name=productReplaceAdd]', function (event) {
+	event.preventDefault();
+    var currentIndex = $(this).attr('id').replace(/\D/g,'').trim();
+    var currentReplaceProduct = $('.replace-product' + currentIndex);
+    currentReplaceProduct.attr('style','display: block;');
+    console.log(currentReplaceProduct);
+    // currentProduct.remove();
+    return true;
+});
 (function(){
 	var request;
 // Bind to the submit event of our form
@@ -92,7 +106,6 @@ $(document).on('click', '.delete-product', function () {
 		// Fire off the request to /form.php
 		request = $.ajax({
 			type: "POST",
-			method: "POST",
 			url: "https://script.google.com/macros/s/AKfycbyIZXopHL1bzFykYHptdOTIHkspO759-qi1xEjIPMcwz0S2HKZl/exec?source=allturk",
 			dataType: "jsonp",
 			data: serializedData
@@ -106,7 +119,6 @@ $(document).on('click', '.delete-product', function () {
 		// Callback handler that will be called on failure
 		request.fail(function (jqXHR, textStatus, errorThrown) {
 			// Log the error to the console
-
 		});
 
 		// Callback handler that will be called regardless
@@ -114,25 +126,23 @@ $(document).on('click', '.delete-product', function () {
 		request.always(function (response) {
 			// Reenable the inputs
 			//$inputs.prop("disabled", false);
-			console.log(response.result + ". Row " + response.row + " was created.");
+			console.log(response.result);
 		});
-
+		clearForm();
+		window.location.reload();
 		// Prevent default posting of form
-		if (event) event.preventDefault();
+		//if (event) event.preventDefault();
 	};
 	function clearForm() {
-		$('#order')[0].reset();
+		// $('#order')[0].reset();
+
+		window.location.reload();
+		return;
 	}
 	$('#order').submit(function (e) {
 		e.preventDefault();
 		//console.log('The button is clicked');
 		// update hidden inputs
 		formSubmit();
-		setTimeout(function () {
-			// var r = confirm("Form Submitted. You can now close the window or select \"OK\" to create a new form");
-			// if (r == true) {
-			clearForm();
-			// }
-		}, 500)
 	});
 })();
