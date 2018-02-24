@@ -91,6 +91,7 @@ $(document).on('click', '.delete-product', function () {
 
 		// Fire off the request to /form.php
 		request = $.ajax({
+			type: "POST",
 			method: "POST",
 			url: "https://script.google.com/macros/s/AKfycbyIZXopHL1bzFykYHptdOTIHkspO759-qi1xEjIPMcwz0S2HKZl/exec?source=allturk",
 			dataType: "jsonp",
