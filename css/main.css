@@ -25,11 +25,11 @@ textarea {
 }
 [class^=replace-product]{
   background-color: lightgrey;
-  margin-left: 1em;
+  
   padding: 1em;
 }
 [class^=main-product]{
-  margin-left: 1em;
+  
   padding: 1em;
 }
 /* ============================================================

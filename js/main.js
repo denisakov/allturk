@@ -128,8 +128,13 @@ $(document).on('click', 'a[name=productReplaceAdd]', function (event) {
 			//$inputs.prop("disabled", false);
 			console.log(response.result);
 		});
-		clearForm();
-		window.location.reload();
+		// clearForm();
+		$('.message').attr('style','display:block;');
+		setTimeout(function(){
+			$('.message').attr('style','display:none;');
+			window.location.reload();
+		},3000);
+
 		// Prevent default posting of form
 		//if (event) event.preventDefault();
 	};
