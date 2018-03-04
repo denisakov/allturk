@@ -56,7 +56,8 @@
                 <h4>Товар</h4>
               </div>
               <div class="form-group ml-auto p-2">
-                <button for="productDelete" class="btn btn-danger glyphicon glyphicon-remove delete-product align-self-right" id="productDelete" name="productDelete" style="display: none;">
+                <button for="productDelete" class="btn btn-danger  delete-product align-self-right" id="productDelete" name="productDelete"  style="display: none;">
+                  <span class="glyphicon glyphicon-remove" title="Удалить данный товар и замену к нему"></span>
                 </button>
               </div>
             </div>
@@ -83,7 +84,7 @@
             <div class="form-row">
               <div class="form-group col-md-3">
                 <label for="productPrice">Цена (TRY):</label>
-                <input class="form-control" id="productPrice" name="productPrice" type="text" maxlength="7" value="10">
+                <input class="form-control" id="productPrice" name="productPrice" type="text" maxlength="7">
                 <small id="priceHelpBlock" class="form-text text-muted">
                   за штуку на сайте
                 </small>
@@ -119,7 +120,8 @@
               <h4>Замена</h4>
             </div>
             <div class="form-group ml-auto p-2">
-              <button for="replaceProductDelete" class="btn btn-danger glyphicon glyphicon-remove replace-delete-product" id="replaceProductDelete" name="replaceProductDelete">
+              <button for="replaceProductDelete" class="btn btn-danger replace-delete-product" id="replaceProductDelete" name="replaceProductDelete">
+                <span class="glyphicon glyphicon-remove" title="Удалить данную замену"></span>
               </button>
             </div>
           </div>
@@ -179,19 +181,21 @@
               <textarea class="form-control" id="generalComment" title="Комментарий который касается всего заказа" name="generalComment" type="textarea" rows="2"></textarea>
             </div>
             <br /><br />
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">Заказать</button>
-            </div>
-            <div class="totals">
-              <div class="left">Всего к оплате: &nbsp;</div>
-              <div class="left total">
-                TRY
+          </div>
+            <div class="form-row d-flex">
+              <div class="p-2">
+                <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">Заказать</button>
+              </div>
+              <div class="p-2">
+                <label>Всего к оплате: &nbsp;</label>
+              </div>
+              <div class="mr-auto p-2 total">
               </div>
             </div>
             <div class="message success" style="display: none;">
               Ваш заказ отправлен!<br>
             </div>
-          </div>
+          
         </form>
       </div> <!-- //container  -->
     </section>
@@ -201,12 +205,13 @@
     <footer>
       <p>&copy; AllTurk 2018</p>
     </footer>
+    
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-v3.2.1.min.js"><\/script>')</script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/vendor/modernizr-respond.js"></script>
-    <script src="js/vendor/watermark.js"></script>
     <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

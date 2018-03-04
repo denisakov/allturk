@@ -158,3 +158,21 @@ $(document).on('click', '.replace-delete-product', function () {
 	});
 })();
 //Calculations
+$('input[name=replaceProductPrice]').change(function () {
+    updateTotal();
+});
+$('input[name=replaceProductQty]').change(function () {
+    updateTotal();
+});
+
+var updateTotal = function () {
+
+    var total = 0;
+
+    total += parseFloat($('input[name=replaceProductPrice]').val())*parseFloat($('input[name=replaceProductQty]').val());
+    $('.total').html(total);
+
+};
+
+// Update total on page load
+updateTotal();

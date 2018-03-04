@@ -15,10 +15,10 @@ body{
 	padding-top:0px;
 }
 .comment{
-  width: 95%;
+  width: 100%;
 }
 textarea {
-  width: 95%;
+  width: 100%;
 }
 .hide{
   display: none;
