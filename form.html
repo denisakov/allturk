@@ -5,7 +5,7 @@
   <title>AllTurk</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="css/form.css"> -->
@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="css/glyphicons.css">
 </head>
 <body>
-  <div class="container-fluid">
       <!--[if lt IE 8]>
           <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
@@ -30,11 +29,10 @@
     </section>
 
     <section class="content module" id="" >
-      <!-- <div class="container"> -->
 
 <!-- This is where the new form starts -->
-
-        <form id="order">
+<div class="container-fluid">
+       <form id="order">
           <h2>Оформление заказа</h2>
           <div class="conditions">
             Условия: 10% от стоимости + доставка от производителя на наш склад + доставка с нашего склада на ваш адрес
@@ -53,12 +51,12 @@
 <!-- Product section -->
         <div class="repeat-product">
           <div class="main-product">
-            <div class="form-group clearfix">
-              <div>
+            <div class="form-group d-flex">
+              <div class="form-group p-2">
                 <h4>Товар</h4>
               </div>
-              <div class="float-right">
-                <button for="productDelete" class="btn btn-danger glyphicon glyphicon-remove delete-product" id="productDelete" name="productDelete" style="display: none;">
+              <div class="form-group ml-auto p-2">
+                <button for="productDelete" class="btn btn-danger glyphicon glyphicon-remove delete-product align-self-right" id="productDelete" name="productDelete" style="display: none;">
                 </button>
               </div>
             </div>
@@ -66,6 +64,7 @@
               <label for="productLink">Ссылка:</label>
               <input id="productLink" class="form-control" name="productLink" type="text" maxlength="1024">
             </div>
+
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="productName">Название товара/Артикул:</label>
@@ -80,102 +79,93 @@
                 <input id="productSize" class="form-control" name="productSize" type="text" maxlength="32">
               </div>
             </div>
-            <div class="form-group">
-              <label for="productPrice">Цена на сайте:</label>
-              <select id="productCurrency" name="productCurrency" >
-                <option value="TRY">TRY</option>
-                <option value="USD">$</option>
-                <option value="EUR">€</option>
-              </select>
-              <input id="productPrice" name="productPrice" type="text" maxlength="7">&nbsp;
 
-              <label for="productQty">Кол-во:</label>
-              <input id="productQty" name="productQty" type="text" value="1" maxlength="3">
-            </div>
-            <div class="form-group">
-              <span class="small">
-                <a href="#" id="productCommentAdd" name="productCommentAdd">Добавить комментарий</a>
-                или
-                <a href="#" id="productReplaceAdd" name="productReplaceAdd">вариант замены</a>
-              </span>
-
-              <div style="display: none;">
-                <label for="productComment">Комментарий:</label>
-                <input id="productComment" name="productComment" type="text" maxlength="256">
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="productPrice">Цена (TRY):</label>
+                <input class="form-control" id="productPrice" name="productPrice" type="text" maxlength="7" value="10">
+                <small id="priceHelpBlock" class="form-text text-muted">
+                  за штуку на сайте
+                </small>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="productQty">Кол-во:</label>
+                <input class="form-control" id="productQty" name="productQty" type="text" value="1" maxlength="3">
+              </div>
+              <div class="form-group col-md-6 align-self-end">
+                <span class=" float-right">
+                  <a href="#" id="productReplaceAdd" name="productReplaceAdd">Добавить вариант замены</a>
+                </span>
               </div>
             </div>
-            <div class="form-group">
-              <span>
-                <input id="productNoPackaging" name="productNoPackaging" type="checkbox">
-                <label for="productNoPackaging">Отправить без оригинальной упаковки</label>
-              </span>
+            <div class="form-group row">
+              <label for="productComment">Комментарий к данному товару:</label>
+              <input id="productComment" class="form-control" name="productComment" type="text" maxlength="256">
             </div>
-            <div class="form-group">
-              <span>
-                <input id="productCheck" name="productCheck" type="checkbox">
-                <label for="productCheck">Заказать проверку товара</label>
-              </span>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="productNoPackaging" name="productNoPackaging" type="checkbox">
+              <label class="form-check-label" for="productNoPackaging">Отправить без оригинальной упаковки</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="productCheck" name="productCheck" type="checkbox">
+              <label class="form-check-label" for="productCheck">Заказать проверку товара</label>
             </div>
         </div>
 
 <!-- Replacement product section -->
         <div class="replace-product" style="display: none;">
-          <div class="form-group">
-            <h4>Замена</h4>
-            <label for="replaceProductLink">Ссылка:</label>
-            <input id="replaceProductLink" name="replaceProductLink" type="text" maxlength="1024" title="http://">
-          </div>
-          <div class="form-group">
-            <label for="replaceProductName">Название товара/Артикул:</label>
-            <input id="replaceProductName" name="replaceProductName" type="text" maxlength="256">
-          </div>
-          <div class="form-group">
-            <label for="replaceProductColor">Цвет:</label>
-            <input id="replaceProductColor" name="replaceProductColor" type="text" maxlength="32">
-
-            <label for="replaceProductSize">Размер:</label>
-            <input id="replaceProductSize" name="replaceProductSize" type="text" maxlength="32">
-          </div>
-          <div class="form-group">
-            <label for="replaceProductPrice">Цена на сайте:</label>
-            <select id="replaceProductCurrency" name="replaceProductCurrency" >
-              <option value="TRY">TRY</option>
-              <option value="USD">$</option>
-              <option value="EUR">€</option>
-            </select>
-            <input id="replaceProductPrice" name="replaceProductPrice" type="text" maxlength="7" title="0.00">&nbsp;
-
-            <label for="replaceProductQty">Кол-во:</label>
-            <input id="replaceProductQty" name="replaceProductQty" type="text" value="1" maxlength="3">
-          </div>
-          <div class="form-group">
-            <span class="small">
-              <a href="#">Добавить комментарий</a>
-            </span>
-            <div style="display: none;">
-              <label for="replaceProductComment">Комментарий:</label>
-              <input id="replaceProductComment" name="replaceProductComment" type="text" maxlength="256">
+          <div class="form-group d-flex">
+            <div class="form-group p-2">
+              <h4>Замена</h4>
+            </div>
+            <div class="form-group ml-auto p-2">
+              <button for="replaceProductDelete" class="btn btn-danger glyphicon glyphicon-remove replace-delete-product" id="replaceProductDelete" name="replaceProductDelete">
+              </button>
             </div>
           </div>
-          <div class="form-group">
-            <span>
-              <input id="replaceProductNoPackaging" name="replaceProductNoPackaging" type="checkbox">
-              <label for="replaceProductNoPackaging">Отправить без оригинальной упаковки</label>
-            </span>
+          <div class="form-group row">
+            <label for="replaceProductLink">Ссылка:</label>
+            <input id="replaceProductLink" class="form-control" name="replaceProductLink" type="text" maxlength="1024" title="http://">
           </div>
-          <div class="form-group">
-            <span>
-              <input id="replaceProductCheck" name="replaceProductCheck" type="checkbox">
-              <label for="replaceProductCheck">Заказать проверку товара</label>
-            </span>
 
-            <a class="delete" href="#"></a>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="replaceProductName">Название товара/Артикул:</label>
+              <input id="replaceProductName" class="form-control" name="replaceProductName" type="text" maxlength="256">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="replaceProductColor">Цвет:</label>
+              <input id="replaceProductColor" class="form-control" name="replaceProductColor" type="text" maxlength="32">
+            </div>
+            <div class="form-group col-md-2">
+              <label for="replaceProductSize">Размер:</label>
+              <input id="replaceProductSize" class="form-control" name="replaceProductSize" type="text" maxlength="32">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label for="replaceProductPrice">Цена (TRY):</label>
+              <input id="replaceProductPrice" class="form-control" name="replaceProductPrice" type="text" maxlength="7" title="0.00">
+              <small id="priceHelpBlock" class="form-text text-muted">
+                за штуку на сайте
+              </small>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="replaceProductQty">Кол-во:</label>
+              <input id="replaceProductQty" class="form-control" name="replaceProductQty" type="text" value="1" maxlength="3">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="replaceProductComment">Комментарий к замене:</label>
+            <input id="replaceProductComment" class="form-control" name="replaceProductComment" type="text" maxlength="256">
           </div>
         </div>
       </div>
-          <!-- End of replacement product section -->
+<!-- End of replacement product section -->
           <div class="form-group">
-            <button class="btn btn-success glyphicon glyphicon-plus add-product">
+            <button class="btn btn-success btn-lg glyphicon glyphicon-plus add-product">
               <span class="buttonText">
                 Добавить новый товар
               </span>
@@ -184,25 +174,26 @@
           </div>
           <div class="totals">
             <div class="left">Всего к оплате: &nbsp;</div>
-            <div class="left total"><div>$ 0.00</div></div>
+            <div class="left total">
+              TRY
+            </div>
           </div>
           <!-- End of product section -->
-          <div class="form-group">
+          <div class="form-row">
             <div class="comment">
-              <label>Комментарии к заказу:</label>
-              <br />
-              <input class="form-control" id="comment" title="Пример: если нет красного цвета, можно брать черный." type="textarea"></input>
+              <label for="generalComment">Комментарии к заказу:</label>
+              <textarea class="form-control" id="generalComment" title="Комментарий который касается всего заказа" name="generalComment" type="textarea" rows="2"></textarea>
             </div>
-            <br />
+            <br /><br />
             <div class="form-group">
-              <button type="submit" class="btn btn-primary" id="submitBtn">Заказать</button>
+              <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">Заказать</button>
             </div>
             <div class="message success" style="display: none;">
               Ваш заказ отправлен!<br>
             </div>
           </div>
         </form>
-      <!-- </div> //container --> 
+      </div> <!-- //container  -->
     </section>
   </div>
     <hr>
@@ -210,15 +201,13 @@
     <footer>
       <p>&copy; AllTurk 2018</p>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
-
-    <!-- <script src="js/vendor/bootstrap.min.js"></script> -->
+    <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-v3.2.1.min.js"><\/script>')</script> -->
 
     <script src="js/main.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/vendor/modernizr-respond.js"></script>
     <script src="js/vendor/watermark.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!-- <script>

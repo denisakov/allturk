@@ -19,7 +19,7 @@ var counter = (() => {
 $(document).on('click', '.add-product', function () {
     var currentCount = $('.repeat-product').length;
     var newCount = counter.value();
-    console.log(newCount);
+    //console.log(newCount);
     var lastRepeatingGroup = $('.repeat-product').last();
     var template = $('.repeat-product').first();
     var newSection = template.clone();
@@ -47,6 +47,7 @@ $(document).on('click', '.add-product', function () {
     });
     newSection.find("button").each(function (index, button) {
         var b = $(this);
+        b.attr('for', b.attr('for') + newCount);
         b.attr('id', b.attr('id') + newCount);
         b.attr('name', b.attr('name') + newCount);
         b.attr('style', '');
@@ -59,24 +60,29 @@ $(document).on('click', 'a[name=productReplaceAdd]', function (event) {
     var currentIndex = $(this).attr('id').replace(/\D/g,'').trim();
     var currentReplaceProduct = $('.replace-product' + currentIndex);
     currentReplaceProduct.attr('style','display: block;');
-    console.log(currentReplaceProduct);
+    //console.log(currentReplaceProduct);
     // currentProduct.remove();
     return true;
 });
 $(document).on('click', '.delete-product', function () {
+	event.preventDefault();
     var currentIndex = $(this).attr('id').replace(/\D/g,'').trim();
     var currentProduct = $('.product' + currentIndex).remove();
-    console.log(currentProduct);
-    // currentProduct.remove();
+    // console.log(currentProduct);
     return true;
 });
 //Replace product controls
-$(document).on('click', 'a[name=productReplaceAdd]', function (event) {
+
+$(document).on('click', '.replace-delete-product', function () {
 	event.preventDefault();
     var currentIndex = $(this).attr('id').replace(/\D/g,'').trim();
     var currentReplaceProduct = $('.replace-product' + currentIndex);
-    currentReplaceProduct.attr('style','display: block;');
-    console.log(currentReplaceProduct);
+    currentReplaceProduct.find("input").each(function (index, input) {
+    	$(this).val('');
+    });
+    currentReplaceProduct.attr('style','display: none;');
+
+    //console.log('found the replacement' + $(this));
     // currentProduct.remove();
     return true;
 });
@@ -151,3 +157,4 @@ $(document).on('click', 'a[name=productReplaceAdd]', function (event) {
 		formSubmit();
 	});
 })();
+//Calculations
