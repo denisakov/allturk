@@ -36,7 +36,7 @@ $(document).on('click', '.add-product', function () {
         var i = $(this).attr('id');
         $(this).attr('id', i + newCount);
         $(this).val('');
-        if ($(this).attr('name') == 'productPrice' || $(this).attr('name') == 'productQty'){
+        if ($(this).attr('name') == 'productPrice' || $(this).attr('name') == 'productQty' || $(this).attr('name') == 'productNoPackaging' || $(this).attr('name') == 'productCheck'){
         	$(this).change(function () {
 			    updateTotal();
 			});
@@ -173,16 +173,32 @@ $('input[name=productPrice]').change(function () {
 $('input[name=productQty]').change(function () {
     updateTotal();
 });
+$('input[name=productNoPackaging]').change(function () {
+    updateTotal();
+});
+$('input[name=productCheck]').change(function () {
+    updateTotal();
+});
 
 var updateTotal = function () {
     var total = 0;
     var price = $('input[name=productPrice]');
     var qty = $('input[name=productQty]');
+    var unpack = $('input[name=productNoPackaging]');
+    var check = $('input[name=productCheck]');
     $("div[class^='main-product']").each(function(index,input){
     	var p = parseFloat($(this).find(price).val());
     	var q = parseFloat($(this).find(qty).val());
+    	var u = $(this).find(unpack).is(':checked');
+    	var c = $(this).find(check).is(':checked');
     	if(!isNaN(p) && !isNaN(q)){
 	    	total += p * q;
+	    	if (u){
+	    		total += 1;
+	    	}
+	    	if(c){
+	    		total += 3;
+	    	}
 	    	console.log(total);
 	    }
     });
