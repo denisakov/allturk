@@ -17,7 +17,7 @@ var counter = (() => {
   };
 })();
 $(document).on('click', '.add-product', function () {
-    var currentCount = $('.repeat-product').length;
+    //var currentCount = $('.repeat-product').length;
     var newCount = counter.value();
     //console.log(newCount);
     var lastRepeatingGroup = $('.repeat-product').last();
@@ -36,6 +36,11 @@ $(document).on('click', '.add-product', function () {
         var i = $(this).attr('id');
         $(this).attr('id', i + newCount);
         $(this).val('');
+        if ($(this).attr('name') == 'productPrice' || $(this).attr('name') == 'productQty'){
+        	$(this).change(function () {
+			    updateTotal();
+			});
+        }
     });
     newSection.find("a").each(function (index, a) {
         var a = $(this).attr('id');
@@ -62,6 +67,7 @@ $(document).on('click', 'a[name=productReplaceAdd]', function (event) {
     currentReplaceProduct.attr('style','display: block;');
     //console.log(currentReplaceProduct);
     // currentProduct.remove();
+    
     return true;
 });
 $(document).on('click', '.delete-product', function (event) {
@@ -69,6 +75,8 @@ $(document).on('click', '.delete-product', function (event) {
     var currentIndex = $(this).attr('id').replace(/\D/g,'').trim();
     var currentProduct = $('.product' + currentIndex).remove();
     // console.log(currentProduct);
+    counter.decrement();
+    updateTotal()
     return true;
 });
 //Replace product controls
@@ -84,6 +92,7 @@ $(document).on('click', '.replace-delete-product', function (event) {
 
     //console.log('found the replacement' + $(this));
     // currentProduct.remove();
+    
     return true;
 });
 (function(){
@@ -158,20 +167,33 @@ $(document).on('click', '.replace-delete-product', function (event) {
 	});
 })();
 //Calculations
-$('input[name=replaceProductPrice]').change(function () {
+$('input[name=productPrice]').change(function () {
     updateTotal();
 });
-$('input[name=replaceProductQty]').change(function () {
+$('input[name=productQty]').change(function () {
     updateTotal();
 });
 
 var updateTotal = function () {
-
     var total = 0;
+    var price = $('input[name=productPrice]');
+    var qty = $('input[name=productQty]');
+    $("div[class^='main-product']").each(function(index,input){
+    	var p = parseFloat($(this).find(price).val());
+    	var q = parseFloat($(this).find(qty).val());
+    	if(!isNaN(p) && !isNaN(q)){
+	    	total += p * q;
+	    	console.log(total);
+	    }
+    });
 
-    total += parseFloat($('input[name=replaceProductPrice]').val())*parseFloat($('input[name=replaceProductQty]').val());
-    $('.total').html(total);
-
+ //    total += parseFloat($('input[name=productPrice]').val())*parseFloat($('input[name=productQty]').val());
+ //    //console.log(isNaN(total));
+    if(!isNaN(total)){
+	    $('.total').html('TRY ' + total);
+	} else {
+		$('.total').html('TRY 0');
+	}
 };
 
 // Update total on page load

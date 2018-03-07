@@ -38,7 +38,12 @@ textarea {
 	font-family: "Oswald", Helvetica, Arial, sans-serif!important;
 	font-weight: 600;
 }
-
+div.total{
+	font-family: "Oswald", Helvetica, Arial, sans-serif!important;
+	font-size:3rem;
+	font-weight: 600;
+	color:#355dd6;
+}
 .row {
 	margin-left:0px;
 	margin-right:0px;
