@@ -64,7 +64,7 @@ $(document).on('click', 'a[name=productReplaceAdd]', function (event) {
     // currentProduct.remove();
     return true;
 });
-$(document).on('click', '.delete-product', function () {
+$(document).on('click', '.delete-product', function (event) {
 	event.preventDefault();
     var currentIndex = $(this).attr('id').replace(/\D/g,'').trim();
     var currentProduct = $('.product' + currentIndex).remove();
@@ -73,7 +73,7 @@ $(document).on('click', '.delete-product', function () {
 });
 //Replace product controls
 
-$(document).on('click', '.replace-delete-product', function () {
+$(document).on('click', '.replace-delete-product', function (event) {
 	event.preventDefault();
     var currentIndex = $(this).attr('id').replace(/\D/g,'').trim();
     var currentReplaceProduct = $('.replace-product' + currentIndex);
