@@ -197,7 +197,7 @@ var updateTotal = function () {
 	    		total += 1*q;
 	    	}
 	    	if(c){
-	    		total += 3*q;
+	    		total += 2*q;
 	    	}
 	    	console.log(total);
 	    }
