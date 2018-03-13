@@ -194,10 +194,10 @@ var updateTotal = function () {
     	if(!isNaN(p) && !isNaN(q)){
 	    	total += p * q;
 	    	if (u){
-	    		total += 1;
+	    		total += 1*q;
 	    	}
 	    	if(c){
-	    		total += 3;
+	    		total += 3*q;
 	    	}
 	    	console.log(total);
 	    }
