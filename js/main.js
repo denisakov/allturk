@@ -166,7 +166,7 @@ $(document).on('click', '.replace-delete-product', function (event) {
 		formSubmit();
 	});
 })();
-//Calculations
+//Calculations http://jsfiddle.net/pq46skgn/5/
 $('input[name=productPrice]').change(function () {
     updateTotal();
 });

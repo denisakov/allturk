@@ -35,16 +35,16 @@
        <form id="order">
           <h2>Оформление заказа</h2>
           <div class="conditions">
-            Условия: 10% от стоимости + доставка от производителя на наш склад + доставка с нашего склада на ваш адрес
+            Условия:<br />10% от стоимости<br />+ доставка от производителя на наш склад<br />+ доставка с нашего склада на ваш адрес
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="customerName">Имя Фамилия:</label>
-              <input type="text" class="form-control" maxlength="64" name="customerName" autocomplete="off">
+              <input type="text" class="form-control" maxlength="64" required name="customerName" autocomplete="off">
             </div>
             <div class="form-group col-md-6">
               <label for="customerEmail">Электронная почта:</label>
-              <input type="text" class="form-control" maxlength="64" name="customerEmail" autocomplete="off">
+              <input type="text" class="form-control" maxlength="64" required name="customerEmail" autocomplete="off">
             </div>
           </div>
           <!-- http://jsfiddle.net/sb8fyehv/ -->
@@ -91,7 +91,7 @@
               </div>
               <div class="form-group col-md-3">
                 <label for="productQty">Кол-во:</label>
-                <input class="form-control" id="productQty" name="productQty" type="text" value="1" maxlength="3">
+                <input class="form-control" id="productQty" name="productQty" type="text" maxlength="3">
               </div>
               <div class="form-group col-md-6 align-self-end">
                 <span class=" float-right">
@@ -155,7 +155,7 @@
             </div>
             <div class="form-group col-md-3">
               <label for="replaceProductQty">Кол-во:</label>
-              <input id="replaceProductQty" class="form-control" name="replaceProductQty" type="text" value="1" maxlength="3">
+              <input id="replaceProductQty" class="form-control" name="replaceProductQty" type="text" maxlength="3">
             </div>
           </div>
 
@@ -172,7 +172,6 @@
                 Добавить новый товар
               </span>
             </button>
-            <!-- <a href="#" class="add-product">Добавить новый товар</a> -->
           </div>
           <!-- End of product section -->
           <div class="form-row">
@@ -186,16 +185,16 @@
               <div class="mr-auto p-2">
                 <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">Заказать</button>
               </div>
+              <div class="message success mr-auto p-2" style="display:none;">
+                <strong>Ваш заказ отправлен!</strong><br />
+                <small>В ближайшее время <br />Вы получите сообщение с деталями заказа.</small>
+              </div>
               <div class="p-2">
                 <label>Всего к оплате: &nbsp;</label>
                 <div class="total">
                 </div>
               </div>
             </div>
-            <div class="message success" style="display: none;">
-              Ваш заказ отправлен!<br>
-            </div>
-          
         </form>
       </div> <!-- //container  -->
     </section>
